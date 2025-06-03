@@ -11,7 +11,7 @@ permissions:
 env:
   ENVIRONMENT: dev
   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-  SONAR_URL: ${{ secrets.SONAR_URL }}
+  SONAR_URL: "http://18.212.59.158:9000"
 
 jobs:
   build-and-deploy:

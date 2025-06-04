@@ -34,5 +34,5 @@ jobs:
 
       - name: Build & Push Docker image
         run: |
-          docker build -t docker.io/${{ secrets.DOCKERHUB_USERNAME }}/myntra-app:latest .
-          docker push docker.io/${{ secrets.DOCKERHUB_USERNAME }}/myntra-app:latest
+          docker build -t ${{ secrets.DOCKERHUB_USER }}/myntra-app:latest .
+          docker push ${{ secrets.DOCKERHUB_USER }}/myntra-app:latest

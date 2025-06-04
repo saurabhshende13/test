@@ -24,7 +24,7 @@ jobs:
           projectBaseDir: .
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: "http://34.201.136.252:9000"
+          SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2

@@ -50,7 +50,7 @@ jobs:
             --document-name "AWS-RunShellScript" \
             --instance-ids "${{ secrets.EC2_INSTANCE_ID }}" \
             --comment "Deploy Docker container from GitHub Actions" \
-            --parameters commands="docker pull ${{ secrets.DOCKERHUB_USER }}/myntra-app:latest && docker stop myntra-app || true && docker rm myntra-app || true && docker run -d --name myntra-app -p 80:3000 ${{ secrets.DOCKERHUB_USER }}/myntra-app:latest" \
+            --parameters commands="docker pull ${{ secrets.DOCKERHUB_USER }}/myntra-app:latest && docker stop myntra-app || true && docker rm myntra-app || true && docker run -d --name myntra-app -p 3000:3000 ${{ secrets.DOCKERHUB_USER }}/myntra-app:latest" \
             --output text
 
 

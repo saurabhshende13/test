@@ -8,12 +8,11 @@ permissions:
   contents: read
   id-token: write
 
-env:
-  ENVIRONMENT: dev
-
 jobs:
   build-and-deploy:
+    name: Build → Push → Deploy
     runs-on: ubuntu-latest
+    environment: dev
 
     steps:
       - name: Checkout source code
